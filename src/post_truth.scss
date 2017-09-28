@@ -1,0 +1,801 @@
+$white: #fff;
+$white05: rgba(255,255,255,0.7);
+$blue: #00f;
+$red: #f00;
+$light_grey: rgb(209, 211, 212);
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body,
+html {
+  width: 100vw;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  text-decoration: none;
+  color: $white;
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button, html [type="button"],
+/* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+/* 1 */
+menu {
+  display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+// @font-face {
+//   font-family: 'Kazimir Text Medium';
+//   src: url("fonts/kazimir/Kazimir-Text-Medium-Web.eot");
+//   src: url("fonts/kazimir/Kazimir-Text-Medium-Web.eot#iefix") format('embedded-opentype'),url(fonts/kazimir/Kazimir-Text-Medium-Web.woff2) format('woff2'),url(fonts/kazimir/Kazimir-Text-Medium-Web.woff) format('woff'),url(fonts/kazimir/Kazimir-Text-Medium-Web.ttf) format('truetype'),url(fonts/kazimir/Kazimir-Text-Medium-Web.svg#font) format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+@font-face {
+  font-family: 'Agipo Regular';
+  src: url("fonts/agipo/Agipo-Regular.eot");
+  src: url("fonts/agipo/Agipo-Regular.eot#iefix") format('embedded-opentype'),url('fonts/agipo/Agipo-Regular.woff2') format('woff2'),url('fonts/agipo/Agipo-Regular.woff') format('woff'),url('fonts/agipo/Agipo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kazimir Text Medium";
+  src: url("fonts/kazimir/Kazimir-Text-Medium-Web.eot");
+  src: url("fonts/kazimir/Kazimir-Text-Medium-Web.eot#iefix") format('embedded-opentype'),url('fonts/kazimir/Kazimir-Text-Medium-Web.woff2') format('woff2'),url('fonts/kazimir/Kazimir-Text-Medium-Web.woff') format('woff'),url('fonts/kazimir/Kazimir-Text-Medium-Web.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('fonts/fontello.eot');
+  src: url('fonts/fontello.eot#iefix') format('embedded-opentype'), url('fonts/fontello.woff2') format('woff2'), url('fonts/fontello.woff') format('woff'), url('fonts/fontello.ttf') format('truetype'), url('fonts/fontello.svg#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-facebook-1:before {
+  content: '\e800';
+}
+/* '' */
+.icon-vkontakte-1:before {
+  content: '\e801';
+}
+/* '' */
+.icon-instagram:before {
+  content: '\f32d';
+}
+/* '' */
+[class*=" icon-"]:before,
+[class^="icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.section {
+  display: flex;
+  padding: 0 50px;
+}
+
+.section_first {
+  background-color: $red;
+  // height: 350px;
+  flex-direction: column;
+}
+
+.section_second {
+  // margin-top: 100px;
+  height: 400px;
+  align-items: stretch;
+  justify-content: center;
+}
+.section_third{
+  background-color: $red;
+  height: 700px;
+  // flex-direction: column;
+  z-index: 7;
+  flex-wrap: wrap;
+}
+
+.button,
+.h1,
+.h2,
+.h3,
+.list-item__header {
+  font-family: 'Agipo Regular';
+}
+.h3 {
+  // font-family: "Kazimir Text Medium";
+  line-height: 28px;
+}
+
+.h1 {
+  color: $white;
+  z-index: 9;
+  margin: 50px 0 30px 0;
+  font-size: 32px;
+}
+.h2_full{
+  width:100%;
+}
+
+.h2,
+.h3 {
+  margin: 20px;
+  z-index: 9;
+  color: $white;
+  // max-height: 70px;
+}
+
+.h3_right {
+  align-self: flex-end;
+  flex-basis: 40%;
+  max-width: 50%;
+}
+.h3_center{
+  margin: auto;
+}
+.h3_black{
+  color: #000;
+}
+.h3_modal{
+  color:#000;
+}
+.modal-a{
+  text-decoration: underline;
+}
+.modal-window__p{
+  color: #000;
+}
+
+.modal-window{
+  display: none;
+}
+
+.modal-window__outside{
+  position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+}
+.modal-window__inside{
+  display: flex;
+  position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 80%;
+    background-color: $white;
+    color: #000;
+    z-index: 99;
+}
+.modal-window__main{
+  max-width: 75%;
+}
+.modal-window__aside{
+  width: 30%;
+  height: 100%;
+  background-color:$light_grey;
+}
+
+.logo {
+  height: 100px;
+  align-self: center;
+}
+
+.description-img{
+  position: absolute;
+}
+
+.img-wrapper{
+  width: 50%;
+  height: auto;
+}
+.lists-img{
+  width: 100%;
+}
+.lists-wrapper{
+  width: 50%;
+}
+
+.ball {
+  position: absolute;
+}
+
+.oblique-edge {
+  width: 100%;
+  height: 150px;
+  transform: translateY(-35px) rotate(3deg);
+  background-color: $red;
+  z-index: -1;
+}
+
+.oblique-edge_reversed {
+  transform:  translateY(70px) rotate(-3deg);
+  z-index: -1;
+}
+
+.list {
+  list-style: none;
+  max-width: 30%;
+}
+.list_right{
+  align-self: flex-end;
+  max-width: 50%;
+}
+.list_white{
+  color: $white;
+  align-self: flex-end;
+  // max-width: 50%;
+}
+.list_program{
+  max-width: 100%;
+  z-index: 10;
+}
+
+.list__item {
+  height: 50%;
+  font-family: 'Kazimir Text Medium';
+  font-size: 18px;
+}
+.list__item_white{
+  margin: 20px;
+
+}
+
+.list__item_margined {
+  height: 25%;
+  margin-top: 25%;
+}
+
+.contacts__list {
+  font-family: 'Agipo Regular';
+  color: $red;
+  list-style: none;
+  margin:20px;
+  font-size: 16px;
+  padding-left: 0;
+}
+
+.social__list {
+display: inline-block;
+  list-style: none;
+  margin:20px;
+  font-size: 34px;
+  padding-left: 0;
+  color: #000;
+}
+.social__list_margin10{
+  margin: 10px 10px;
+}
+.social__list-item{
+  display: inline-block;
+  position: relative;
+}
+.social__a{
+  position: absolute;
+    top: 1px;
+    left: 7px;
+    width: 34px;
+    height: 34px;
+}
+
+.form-subscribe{
+  color: $white;
+  font-family: "Agipo Regular";
+  display: flex;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px $white05 solid;
+  border-radius: 20px;
+  padding:10px;
+  margin:10px 20px;
+}
+.form-subscribe__label{
+margin:10px ;
+min-width: 20%;
+color: #000;
+}
+.form-subscribe__label[for="agreement-checkbox"]{
+margin-top:20px ;
+font-family: "Kazimir-Text-Medium"
+}
+.form-subscribe__input{margin:10px ;
+  outline: none;
+  border: 1px $light_grey solid;
+  height :30px;
+}
+
+.button {
+  outline: none;
+  min-width: 300px;
+  max-width: 400px;
+  height: 75px;
+  color: $white;
+  background-color: $red;
+  border-width: 0px;
+  z-index: 9;
+  margin:20px 20px 40px 20px;
+  font-size: 25px;
+}
+.button_small{
+  margin: 8px 20px 10px 0px;
+  width: 100%;
+  min-width: 100px;
+  max-width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: -4px;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: .1em; left: .3em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: $red;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid $red !important;
+}
